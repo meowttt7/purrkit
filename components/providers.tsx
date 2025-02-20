@@ -1,7 +1,6 @@
 import { PrivyProvider } from "@privy-io/react-auth";
-import { PrivyWagmiConnector } from "@privy-io/wagmi-connector";
+import { WagmiProvider, createConfig } from "@privy-io/wagmi";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { createConfig, WagmiProvider } from "wagmi";
 import { hyperliquid } from "wagmi/chains";
 import { http } from "viem";
 
@@ -22,7 +21,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
         loginMethods: ["wallet"],
         appearance: {
           theme: "light",
-          accentColor: "#FF69B4", // Pink color for PurrKit
+          accentColor: "#50D2C1", // Mint green
           showWalletLoginFirst: true,
         },
         supportedChains: [hyperliquid],
@@ -30,7 +29,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
     >
       <WagmiProvider config={wagmiConfig}>
         <QueryClientProvider client={queryClient}>
-          <PrivyWagmiConnector>{children}</PrivyWagmiConnector>
+          {children}
         </QueryClientProvider>
       </WagmiProvider>
     </PrivyProvider>

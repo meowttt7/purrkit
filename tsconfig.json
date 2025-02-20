@@ -9,7 +9,6 @@
 			"@lib/hooks/*": ["app/_hooks/*"],
 			"@lib/components/*": ["app/_components/*"]
 		},
-		"types": ["bun-types"],
 		"target": "esnext",
 		"module": "esnext",
 		"lib": ["es6", "es7", "esnext", "dom"],
@@ -46,22 +45,9 @@
 	},
 	"exclude": ["node_modules", "_app"],
 	"include": [
-		"**/*.css",
+		"next-env.d.ts",
 		"**/*.ts",
 		"**/*.tsx",
-		"**/*.d.tsx",
-		"packages",
-		"public",
-		"public/manifest.json",
-
-		"packages/*/postcss.config.js",
-		"packages/*/tailwind.config.js",
-		"packages/*/next.config.js",
-		".eslintrc.js",
-		".next/types/**/*.ts",
-		"jest.config.js",
-		"vitest.config.ts",
-		"worker/index.js",
-		"utils/*/*.json"
+		".next/types/**/*.ts"
 	]
 }
