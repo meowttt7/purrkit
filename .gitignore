@@ -1,38 +1,54 @@
-.DS_Store
-node_modules
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+/build
+
+# production
+/build
 /dist
-ipfs
 
+# misc
+.DS_Store
+*.pem
+Thumbs.db
 
-# local env files
-.env.local
-.env.*.local
-
-# Log files
+# debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
+.pnpm-debug.log*
 
-# Editor directories and files
-.idea
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+# local env files
+.env*.local
+.env.development
+.env.test
+.env.production
 
-.env
-.next
+# vercel
 .vercel
-tsconfig.tsbuildinfo
 
+# typescript
+*.tsbuildinfo
+next-env.d.ts
 
-# Auto Generated PWA files
-**/sw.js.map
-**/workbox-*.js
-**/workbox-*.js.map
-**/worker-*.js.map
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
 
-*/sw.js
-**/sw.js
+# logs
+logs
+*.log
+
+# cache
+.cache/
+.next/cache/
